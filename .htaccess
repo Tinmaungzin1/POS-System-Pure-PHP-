@@ -1,0 +1,33 @@
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /sg_pos/
+#Deny access to directory listing and folder paths
+RewriteEngine On
+RewriteRule ^login$ login.php [L]
+RewriteRule ^logout$ logout.php [L]
+RewriteRule ^index$ index.php [L]
+RewriteRule ^order$ order.php [L]
+# RewriteRule ^update-order$ update_order.php [L]
+RewriteRule ^order/edit/(\d+)$ order_edit.php?id=$1 [L]
+RewriteRule ^order_list$ order_list.php [L]
+# RewriteRule ^view_order/(\d+)$ view_order.php?id=$1 [L]
+RewriteRule ^view_order/(\d+)$ view_order.php?id=$1&source=order_list [L]
+RewriteRule ^view_order/(\d+)/payment$ view_order.php?id=$1&source=payment [L]
+# RewriteRule ^payment$ payment.php [L]
+RewriteRule ^payment/(\d+)$ payment.php?id=$1 [L]
+RewriteRule ^api/get_category$ api/get_category.php [L]
+RewriteRule ^api/get_items$ api/get_items.php [L]
+RewriteRule ^api/get_item$ api/get_item.php [L]
+RewriteRule ^api/get_all_items$ api/get_all_items.php [L]
+RewriteRule ^api/insert_order$ api/insert_order.php [L]
+RewriteRule ^api/shift$ api/shift.php [L]
+RewriteRule ^api/get_order$ api/get_order.php [L]
+RewriteRule ^api/order_cancel$ api/order_cancel.php [L]
+RewriteRule ^api/get_order_detail$ api/get_order_detail.php [L]
+RewriteRule ^api/get-order-items$ api/get_order_items.php [L]
+RewriteRule ^api/store_payment$ api/store_payment.php [L]
+RewriteRule ^api/update-order$ api/update_order.php [L]
+
+</IfModule>

@@ -1,0 +1,25 @@
+#preview-wrapper,
+#preview-wrapper-img {
+  width: 400px;
+  height: 300px;
+  overflow: hidden;
+  border: 1px solid rgb(30, 26, 26);
+  border-radius: 3px;
+}
+.choose-file {
+  display: inline-block;
+  background-color: indigo;
+  color: white;
+  padding: 0.5rem;
+  font-family: sans-serif;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  position: absolute;
+  top: 37%;
+  left: 25%;
+  opacity: 0.7;
+}
+.hide {
+  display: none;
+}
